@@ -14,4 +14,6 @@ puts Capybara.default_driver
 
 
 visit '/'
+fill_in 'q', :with => 'Test'
+click_button 'Google Search'
 puts page.source.length
