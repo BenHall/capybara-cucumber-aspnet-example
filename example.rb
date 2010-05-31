@@ -14,6 +14,11 @@ puts Capybara.default_driver
 
 
 visit '/'
-fill_in 'q', :with => 'Test'
+#fill_in 'q', :with => 'Test'
+#click_button 'Google Search'
+locate("//input[@name='q']").set('Test hack')
+# This also works:
+  # b = locate('//input[@title="Google Search"]')
+  # b.node.send_keys('ESC')
 click_button 'Google Search'
 puts page.source.length
