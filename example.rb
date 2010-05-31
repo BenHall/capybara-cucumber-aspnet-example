@@ -4,6 +4,7 @@ require 'capybara/dsl'
 
 include Capybara
 
+Capybara.debug = true
 Capybara.log 'test'
 
 #Capybara.default_driver = :culerity
